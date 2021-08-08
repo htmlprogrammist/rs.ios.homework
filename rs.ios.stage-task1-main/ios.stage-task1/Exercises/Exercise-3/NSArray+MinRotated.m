@@ -3,7 +3,9 @@
 @implementation NSArray (MinRotated)
 
 - (NSNumber *)minRotated {
-    return nil;
+    NSArray *element = [self sortedArrayUsingSelector: @selector(compare:)];
+    NSNumber *number = [element firstObject];
+    return number;
 }
 
 @end
