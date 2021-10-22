@@ -1,6 +1,8 @@
 import Foundation
 
-final class CallStation { }
+final class CallStation {
+    
+}
 
 extension CallStation: Station {
     func users() -> [User] {
