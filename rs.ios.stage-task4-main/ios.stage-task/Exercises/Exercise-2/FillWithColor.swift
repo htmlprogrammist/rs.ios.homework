@@ -47,7 +47,9 @@ struct Point {
 
 final class FillWithColor {
     func fillWithColor(_ image: [[Int]], _ row: Int, _ column: Int, _ newColor: Int) -> [[Int]] {
-        var visited = Array(repeating: Array(repeating: false, count: image[0].count), count: image.count)
+        var visited = Array(repeating:
+                                Array(repeating: false, count: image[0].count),
+                                count: image.count)
         let originalColor = image[row][column]
         var newImage = image
         var queue = [Point]()
@@ -58,22 +60,22 @@ final class FillWithColor {
             let currentPoint = queue.remove(at: 0)
             if let left = currentPoint.left(), newImage[left.row][left.column] == originalColor, !visited[left.row][left.column] {
                 newImage[left.row][left.column] = newColor
-                visited[left.row][left.column]  = true
+                visited[left.row][left.column] = true
                 queue.append(left)
             }
             if let right = currentPoint.right(max: image[0].count), newImage[right.row][right.column] == originalColor, !visited[right.row][right.column] {
                 newImage[right.row][right.column] = newColor
-                visited[right.row][right.column]  = true
+                visited[right.row][right.column] = true
                 queue.append(right)
             }
             if let up = currentPoint.up(), newImage[up.row][up.column] == originalColor, !visited[up.row][up.column] {
                 newImage[up.row][up.column] = newColor
-                visited[up.row][up.column]  = true
+                visited[up.row][up.column] = true
                 queue.append(up)
             }
             if let down = currentPoint.down(max: image.count), newImage[down.row][down.column] == originalColor, !visited[down.row][down.column] {
                 newImage[down.row][down.column] = newColor
-                visited[down.row][down.column]  = true
+                visited[down.row][down.column] = true
                 queue.append(down)
             }
         }
