@@ -19,17 +19,18 @@
 - [ ] LevelOrderTraversal
 
 ### Task 4
-- [ ] IntToRoman
-- [ ] FillWithColor
-- [ ] CallStation
+- [x] IntToRoman
+- [x] FillWithColor
+- [x] CallStation
 
 ### Task 5
-- [ ] StockMaximize
-- [ ] MessageDecryptor
-- [ ] Knapsack
+- [x] StockMaximize
+- [x] MessageDecryptor
+- [x] Knapsack
 
 ### Task 6
-- [ ] CoronaClass
+- [x] CoronaClass
+- [ ] Durak
 
 ### Task 7
 - [ ] LoginApp
